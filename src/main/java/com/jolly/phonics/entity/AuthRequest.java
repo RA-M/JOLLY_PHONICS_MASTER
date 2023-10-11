@@ -1,5 +1,7 @@
 package com.jolly.phonics.entity;
 
+import javax.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,7 +11,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AuthRequest {
 
+	@NotNull(message="username should not be null")
     private String username;
+	@NotNull(message="password should not be null")
     private String password;
 	public String getUsername() {
 		return username;

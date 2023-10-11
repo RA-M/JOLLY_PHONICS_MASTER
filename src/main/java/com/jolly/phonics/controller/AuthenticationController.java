@@ -3,6 +3,8 @@ package com.jolly.phonics.controller;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -39,7 +41,7 @@ public class AuthenticationController {
     }
 
     @PostMapping("/authenticate")
-    public ResponseEntity<?> generateToken(@RequestBody AuthRequest authRequest) throws Exception {
+    public ResponseEntity<?> generateToken(@RequestBody @Valid AuthRequest authRequest) throws Exception {
         /*try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword())
