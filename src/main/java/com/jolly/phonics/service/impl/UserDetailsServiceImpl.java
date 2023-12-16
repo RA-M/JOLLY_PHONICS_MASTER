@@ -40,6 +40,7 @@ public class UserDetailsServiceImpl implements UserDetailsService{
 		
 		User user = new User();
 		user.setUsername(registerUserRequestDto.getEmailId());
+		System.out.println("passwordEncoder :"+passwordEncoder.encode(base64DecodedPasswordStr));
 		user.setPassword(passwordEncoder.encode(base64DecodedPasswordStr));
 		user.setEmail(registerUserRequestDto.getEmailId());
 		user.setUserFullName(registerUserRequestDto.getFirstName()+" "+registerUserRequestDto.getLastName());

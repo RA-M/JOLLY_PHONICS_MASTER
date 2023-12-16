@@ -23,4 +23,12 @@ public class GlobalExceptionHandler {
 		return errorMap;
 	}
 	
+	@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+	@ExceptionHandler(Exception.class)
+	public Map<String, String> handleException(Exception e){
+		Map<String, String> errorMap = new HashMap<>();
+		errorMap.put("error", e.getMessage());
+	    return errorMap;
+	}
+	
 }

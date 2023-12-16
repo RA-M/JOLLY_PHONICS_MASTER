@@ -2,11 +2,13 @@ package com.jolly.phonics;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 //git@github.com:RA-M/JOLLY_PHONICS_MASTER.git
 @SpringBootApplication
+@EnableCaching
 public class JollyPhonicsApplication {
    /* @Autowired
     private UserRepository repository;

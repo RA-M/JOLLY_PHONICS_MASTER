@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jolly.phonics.dto.RegisterUserRequestDto;
 import com.jolly.phonics.entity.AuthRequest;
 import com.jolly.phonics.entity.AuthResponse;
 import com.jolly.phonics.entity.User;
@@ -73,4 +74,10 @@ public class AuthenticationController {
         	throw new Exception("Invalid username of password");
         }
     }
+   /* 
+    @PostMapping("/registerUser")
+    public ResponseEntity<?> registerUser(@RequestBody RegisterUserRequestDto registerUser){
+    	
+    	return ResponseEntity.ok("Done");
+    }*/
 }
