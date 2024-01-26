@@ -17,9 +17,13 @@ public class UserController {
 	@Autowired
 	private UserDetailsService userDetailsService;
 	
+	//UmFtQDEyMw==
 	@PostMapping("/login")
 	public ResponseEntity<?> doLogin(@RequestBody LoginRequest loginRequest){
 		System.out.println(loginRequest.getUsername());
+		
+		userDetailsService.generatePdf();
+		
 		return ResponseEntity.ok("Ok");
 	}
 	

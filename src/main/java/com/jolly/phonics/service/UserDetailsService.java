@@ -8,4 +8,5 @@ public interface UserDetailsService {
 	
 	User findByUsername(String username);
 	RegisterUserResponseDto registerUser(RegisterUserRequestDto registerUserRequestDto);
+	public void generatePdf();
 }
